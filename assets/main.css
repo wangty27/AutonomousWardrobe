@@ -1,0 +1,161 @@
+body{
+  background: #53a387;
+  font-family: Comic Sans MS, cursive;
+}
+
+#wrapper {
+   height: 100vh;
+   width: 100vw;
+   padding: 2vh;
+}
+
+#title {
+   height: 20%;
+   width: 100%;
+   color: #fff;
+   font-size: 1.9rem;
+   text-shadow: 0px 4px #444444;
+   margin-bottom: 6%;
+}
+
+#options {
+  height: 70%;
+  width: 100%;
+}
+
+.button-form{
+  height: 30%;
+  width: 100%;
+}
+
+.option-forms {
+  height: 13%;
+  width: 60%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.option-button {
+  height: 100%;
+  width: 100%;
+  background: #FEFEBD;
+  border-radius: 10px;
+  box-shadow: 0px 4px #666600;
+  font-size: 1.3rem;
+}
+
+#option-text {
+  height: 17%;
+  width: 100%;
+  background: ;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 1.7rem;
+  color: #ffffff;
+  text-shadow: 0px 3px #444444;
+}
+
+.option-button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03, 1.03);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -o-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+  transition: 0.1s all;
+  opacity: 0.9;
+}
+
+.buttons {
+  position: absolute;
+  background: #44816d;
+  height: 3.0rem;
+  width: 3.0rem;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  color: #ffffff;
+  box-shadow: 0px 4px #234338;
+  text-decoration: none;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03, 1.03);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -o-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+  transition: 0.1s all;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+#add-button {
+  margin-right: 2vw;
+  margin-bottom: 3vw;
+}
+
+#view-button {
+  margin-right: 2vw;
+  margin-bottom: 18vw;
+}
+
+/* CSS For suggest view */
+
+#display-title {
+  height: 10%;
+  width: 100%;
+  color: #fff;
+  font-size: 1.7rem;
+  text-shadow: 0px 3px #444444;
+}
+
+#display {
+  height: 90%;
+  width: 100%;
+}
+
+.display-part {
+  height: 48%;
+  width: 70%;
+  background: beige;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.display-pic {
+  height: 100%;
+  width: 100%;
+}
+
+#display-full {
+  height: 80%;
+  width: 70%;
+}
+
+#return-button {
+  color: #fff;
+  position: absolute;
+  z-index: 100;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+#return-button:hover {
+  text-decoration: none;
+}

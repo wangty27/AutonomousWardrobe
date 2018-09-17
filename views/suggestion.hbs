@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/main.css" type="text/css">
+
+</head>
+<body class="text-ubuntu" data-offset="60">
+  <div id="wrapper" class="container d-flex align-items-center justify-content-center flex-column">
+    <div id="display-title" class="d-flex align-items-center justify-content-center">Today's Suggestion</div>
+    <div id="display" class="d-flex align-items-center justify-content-center flex-column">
+      {{#if fullBody}}
+        <div id="display-full"><img src="{{fullPath}}" alt="full" class="display-pic"></div>
+      {{else}}
+        <div id="display-up" class="display-part"><img src="{{upPath}}" alt="upper" class="display-pic"/></div>
+        <div id="display-low" class="display-part"><img src="{{lowPath}}" alt="lower" class="display-pic"/></div>
+      {{/if}}
+    </div>
+  </div>
+  <a id="add-button" class="buttons" href="{{ownPath}}"><i class="fas fa-sync-alt"></i></a>
+  <a id="return-button" href="/"><i class="fas fa-times"></i></a>
+</body>
+</html>

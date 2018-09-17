@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/main.css" type="text/css">
+
+</head>
+<body class="text-ubuntu" data-spy="scroll" data-target="#header" data-offset="60">
+  {{#if successUpload}}
+  <div class="alert alert-success alert-dismissible position-absolute w-100">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Your clothing has been added to the wardrobe.
+  </div>
+  {{/if}}
+  {{#if errorUpload}}
+  <div class="alert alert-danger alert-dismissible position-absolute w-100">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> {{errorMessage}}
+  </div>
+  {{/if}}
+  <div id="wrapper" class="container d-flex align-items-center justify-content-center flex-column">
+    <div id="title" class="d-flex align-items-center justify-content-center">Autonomous Wardrobe</div>
+    <div id="options" class="d-flex flex-column align-items-center justify-content-center">
+      <div id="option-text" class="d-flex align-items-center justify-content-center">
+        Clothing types
+      </div>
+      <form class="option-forms" action="/generateSF" method="get">
+        <button id="option-button-sf" class="d-flex align-items-center justify-content-center option-button" type="submit">
+          Spring/Fall
+        </button>
+      </form>
+      <form class="option-forms" action="/generateSU" method="get">
+        <button id="option-button-su" class="d-flex align-items-center justify-content-center option-button" type="submit">
+          Summer
+        </button>
+      </form>
+      <form class="option-forms" action="/generateWI" method="get">
+        <button id="option-button-wi" class="d-flex align-items-center justify-content-center option-button" type="submit">
+          Winter
+        </button>
+      </form>
+      <form class="option-forms" action="/generateFL" method="get">
+        <button id="option-button-fl" class="d-flex align-items-center justify-content-center option-button" type="submit">
+          Formal
+        </button>
+      </form>
+    </div>
+    <button id="add-button" class="buttons"><i class="fas fa-plus" data-toggle="modal" data-target="#exampleModal"></i></button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Clothing</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post" enctype="multipart/form-data" action="/upload">
+              <input type="file" name="image" accept="image/*" capture="environment" style="margin-top: 10px; margin-bottom: 15px;">
+              <button type="submit" class="btn btn-primary">Add to Wardrobe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="view-button" class="buttons"><i class="fas fa-tshirt"></i></button>
+  </div>
+</body>
+</html>
